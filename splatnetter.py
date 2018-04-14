@@ -6,6 +6,9 @@ from twilio.rest import Client
 from twitter import OAuth2, Twitter
 from twitter.oauth_dance import oauth2_dance
 
+# TODO: Update this to have functions and tests. Update this to also look for
+# manufactures and certain abilities
+
 
 def main(event, context):
     """Query twitter for splatnet items and send a SMS if necessary."""
@@ -21,12 +24,12 @@ def main(event, context):
         return tweet_content
 
     client = Client(os.environ["TWILIO_SID"], os.environ["TWILIO_SECRET"])
-    message = client.messages.create(
+    client.messages.create(
         to=os.environ["RECIPIENT_NUMBER"],
         from_=os.environ["TWILIO_NUMBER"],
         body=tweet_content,
     )
-    return message
+    return True
 
 
 if __name__ == "__main__":
