@@ -1,4 +1,4 @@
-# splatnetter
+# splatnetter [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 Splatnetter is a tiny script that queries the last tweet of a twitter bot that publishes items currently in the SplatNet store and will send a text message to the recipient if it fits the criteria.
 
 It was written to be hosted on AWS Lambda and has a build script that you can run that will create the zip file that you upload to AWS. 
