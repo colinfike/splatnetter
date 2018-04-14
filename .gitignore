@@ -1,0 +1,6 @@
+.env
+.DS_Store
+build/*
+.vscode
+__pycache__
+*.zip
